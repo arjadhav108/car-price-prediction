@@ -16,7 +16,7 @@ names = sorted(df[df['company'] == company]["name"].unique())
 
 name = st.sidebar.selectbox("Select name",names)
 year = st.sidebar.selectbox("Select year",years)
-kms_driven = st.sidebar.number_inputs("Enter km driven", value=50000, min_value=1000,max_va)
+kms_driven = st.sidebar.number_inputs("Enter km driven", value=50000, min_value=1000,max_va=200000)
 fuel = st.sidebar.selectbox("Select fuel type",["Petrol","Disel"])
 
 if st.sidebar.button("Predict Price"):
